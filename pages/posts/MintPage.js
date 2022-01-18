@@ -18,7 +18,7 @@ function expandTo18Decimals(n) {
   return BigNumber.from(n).mul(BigNumber.from(10).pow(18))
 }
 
-let { networkConfig, getNetworkIdFromName } = require('../helper-hardhat-config')
+//let { networkConfig, getNetworkIdFromName } = require('../helper-hardhat-config')
 
 
 export default function Home() {
@@ -46,11 +46,11 @@ export default function Home() {
     const signerAddress = await signer.getAddress();
     const chainId = await signer.getChainId();
 
-    const linkTokenAddress = networkConfig[chainId]['linkToken']
-    const vrfCoordinatorAddress = networkConfig[chainId]['vrfCoordinator']
-    const keyHash = networkConfig[chainId]['keyHash']
-    const fee = networkConfig[chainId]['fee']
-    const fundAmount = networkConfig[chainId]['fundAmount']
+    const linkTokenAddress = '0x01be23585060835e02b77ef475b0cc51aa1e0709'
+    const vrfCoordinatorAddress = '0xb3dCcb4Cf7a26f6cf6B120Cf5A73875B7BBc655B'
+    const keyHash = '0x2ed0feb3e7fd2022120aa84fab1945545a9f2ffc9076fd6156fa96eaff4c1311'
+    const fee = '100000000000000000'
+    const fundAmount = '1000000000000000000'
 
 
     const LinkToken = new ethers.Contract(linkTokenAddress , LinkSC.abi , signer);
