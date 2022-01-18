@@ -19,7 +19,7 @@ function Middle(){
             <div className="rounded overflow-hidden shadow-lg max-w-sm">
         <Image 
             className="cursor-pointer hover:opacity-80 "
-            src={'/../../public/b.png'}
+            src={'/../public/b.png'}
             width={350}
             height={350}
         />
@@ -29,7 +29,7 @@ function Middle(){
         <Image 
 
         className="cursor-pointer hover:opacity-80"
-        src={'/../../public/d.png'}
+        src={'/../public/d.png'}
         width={350}
         height={350}
         />
@@ -39,7 +39,7 @@ function Middle(){
         <Image 
 
         className="cursor-pointer hover:opacity-80"
-        src={'/../../public/e.png'}
+        src={'/../public/e.png'}
         width={350}
         height={350}
         />
@@ -49,7 +49,7 @@ function Middle(){
         <Image 
 
         className="cursor-pointer hover:opacity-80"
-        src={'/../../public/f.png'}
+        src={'/../public/f.png'}
         width={350}
         height={350}
         />
