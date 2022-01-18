@@ -1,5 +1,5 @@
 import Image from "next/image";
-import HeaderItem from "./HeaderItem";
+//import HeaderItem from "./HeaderItem";
 import {
     HomeIcon,
     CubeIcon
@@ -20,11 +20,11 @@ function Header(){
            
 
   <Link href="/">
-  <a><HeaderItem title="HOME" Icon={HomeIcon}/></a>
+  <a>home</a>
   </Link>
 
   <Link href="/posts/mintingFrontPage">
-   <a><HeaderItem title="MINT" Icon={CubeIcon}/></a>
+   <a>Mint</a>
   </Link>
 
        
