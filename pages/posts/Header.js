@@ -17,16 +17,16 @@ function Header(){
         <header className="flex flex-col sm:flex-row m-2 mt-10 justify-between
         items-center h-auto"> 
 
-        <div className="flex flex-grow justify-evenly max-w-sm"> 
+        <div className="flex flex-grow justify-evenly gap-5 max-w-md"> 
            
 
-  <Link href="/">
-  <a className="text-xl font-bold">home</a>
-  </Link>
+            <Link href="/">
+            <a className="text-xl font-bold">home</a>
+            </Link>
 
-  <Link href="/posts/mintingFrontPage">
-   <a className="text-xl font-bold ">Mint</a>
-  </Link>
+            <Link href="/posts/mintingFrontPage">
+            <a className="text-xl font-bold ">Mint</a>
+            </Link>
 
        
         </div>
