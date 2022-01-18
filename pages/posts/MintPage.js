@@ -18,7 +18,7 @@ function expandTo18Decimals(n) {
   return BigNumber.from(n).mul(BigNumber.from(10).pow(18))
 }
 
-let { networkConfig, getNetworkIdFromName } = require('../../../helper-hardhat-config')
+let { networkConfig, getNetworkIdFromName } = require('../helper-hardhat-config')
 
 
 export default function Home() {
