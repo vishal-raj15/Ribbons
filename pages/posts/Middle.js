@@ -51,7 +51,7 @@ function Middle(){
     </div>
 
         <div className="rounded overflow-hidden shadow-lg max-w-sm">
-        <Image 
+        <img 
 
         className="cursor-pointer hover:opacity-80"
         src={'/../public/f.png'}
