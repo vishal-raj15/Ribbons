@@ -7,6 +7,7 @@ import {
 
 import Link from 'next/link'
 
+import Imgh from '../../public/headName.png';
 
 
 function Header(){
@@ -33,7 +34,7 @@ function Header(){
         <Image 
 
             className="object-contain"
-            src={'/../public/headName.png'}
+            src={Imgh}
             alt="a"
             width={110}
             height={50}

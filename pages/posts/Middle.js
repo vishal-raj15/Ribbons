@@ -1,6 +1,11 @@
 
 
 import Image from "next/image";
+import Imga from '../../public/b.jpg';
+import Imgb from '../../public/d.jpg';
+import ImgC from '../../public/e.jpg';
+import ImgD from '../../public/f.jpg';
+
 function Middle(){
 
     return (
@@ -19,7 +24,7 @@ function Middle(){
             <div className="rounded overflow-hidden shadow-lg max-w-sm">
         <Image 
             className="cursor-pointer hover:opacity-80 "
-            src={'/../public/b.png'}
+            src={Imga}
             alt="abc"
             
             width={350}
@@ -32,7 +37,7 @@ function Middle(){
         <Image 
 
         className="cursor-pointer hover:opacity-80"
-        src={'/../public/d.png'}
+        src={Imgb}
         alt="a"
         width={350}
         height={350}
@@ -43,7 +48,7 @@ function Middle(){
         <Image 
 
         className="cursor-pointer hover:opacity-80"
-        src={'/../public/e.png'}
+        src={ImgC}
         alt="a"
         width={350}
         height={350}
@@ -51,10 +56,10 @@ function Middle(){
     </div>
 
         <div className="rounded overflow-hidden shadow-lg max-w-sm">
-        <img 
+        <Image 
 
         className="cursor-pointer hover:opacity-80"
-        src={'/../public/f.png'}
+        src={ImgD}
         alt="a"
         width={350}
         height={350}
@@ -64,7 +69,7 @@ function Middle(){
 
         
         <div className=" flex-grow grid place-items-center"> 
-            <h1 className=" m-2 text-justify text-4xl"> Ready to mint your own NFT ? </h1>
+            <h1 className=" m-2 mt-5 text-justify text-4xl"> Ready to mint your own NFT ? </h1>
         </div>
 
         </div>
