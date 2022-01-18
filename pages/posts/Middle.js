@@ -20,8 +20,11 @@ function Middle(){
         <Image 
             className="cursor-pointer hover:opacity-80 "
             src={'/../public/b.png'}
+            alt="abc"
+            
             width={350}
             height={350}
+
         />
         </div>
 
@@ -30,6 +33,7 @@ function Middle(){
 
         className="cursor-pointer hover:opacity-80"
         src={'/../public/d.png'}
+        alt="a"
         width={350}
         height={350}
         />
@@ -40,6 +44,7 @@ function Middle(){
 
         className="cursor-pointer hover:opacity-80"
         src={'/../public/e.png'}
+        alt="a"
         width={350}
         height={350}
         />
@@ -50,6 +55,7 @@ function Middle(){
 
         className="cursor-pointer hover:opacity-80"
         src={'/../public/f.png'}
+        alt="a"
         width={350}
         height={350}
         />

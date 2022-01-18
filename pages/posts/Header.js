@@ -20,11 +20,11 @@ function Header(){
            
 
   <Link href="/">
-  <a>home</a>
+  <a className="text-xl font-bold">home</a>
   </Link>
 
   <Link href="/posts/mintingFrontPage">
-   <a>Mint</a>
+   <a className="text-xl font-bold ">Mint</a>
   </Link>
 
        
@@ -34,6 +34,7 @@ function Header(){
 
             className="object-contain"
             src={'/../public/headName.png'}
+            alt="a"
             width={110}
             height={50}
         />
