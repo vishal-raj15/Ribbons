@@ -15,7 +15,7 @@ function Middle(){
 
            
         <h1 className=" mt-5 text-center  md:text-9xl text-6xl text-white font-bold"> an On-Chain Artwork</h1>
-        <h1 className=" mt-5 text-center text-4xl md:text-5xl text-white"> without being dependend on IFPS.</h1>
+        <h1 className=" mt-5 text-center text-4xl md:text-5xl text-white"> without being dependend on IPFS.</h1>
 
         </div>
 
