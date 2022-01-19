@@ -1,8 +1,7 @@
 
 import { useEffect, useState } from 'react'
-import axios from 'axios'
 import Web3Modal from "web3modal"
-
+import { Alert } from "reactstrap";
 
 import { ethers , BigNumber} from 'ethers';
 import { MaxUint256 } from '@ethersproject/constants';
@@ -32,7 +31,6 @@ export default function Home() {
   async function requestAccount() {
     await window.ethereum.request({ method: 'eth_requestAccounts' });
   }
-
   
 
   async function mint(){
@@ -41,6 +39,7 @@ export default function Home() {
 
     const web3Modal = new Web3Modal();
     const connection = await web3Modal.connect();
+
     const provider = new ethers.providers.Web3Provider(connection)
     const signer = await provider.getSigner();
     const signerAddress = await signer.getAddress();
@@ -67,6 +66,7 @@ export default function Home() {
 
       if( val <= 0){
         console.log(" error , put some integer ");
+
       }
 
      else{
@@ -126,6 +126,14 @@ export default function Home() {
       onClick={mint}>
       MINT
     </button>
+
+
+     { parseInt(amount) <= 0 ?
+        <Alert color="warning">
+        <strong>Warning!</strong> Input a valid amount
+      </Alert> : <p></p>
+    
+    }
 
 
 
