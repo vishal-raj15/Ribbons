@@ -5,6 +5,7 @@ import { Alert } from "reactstrap";
 
 import { ethers , BigNumber} from 'ethers';
 import { MaxUint256 } from '@ethersproject/constants';
+import Header from './Header';
 
 import NFT from '../../artifacts/RandomSVG.json';
 import LinkSC from '../../artifacts/LinkToken.json';
@@ -84,6 +85,9 @@ export default function Home() {
           console.log( " minting ", i, "th nft ");
           let tx = await NFTcontract.mintNft( i , signerAddress , delta);
           await tx.wait(1);
+
+
+
         }
 
         if( chainId != 31337){
@@ -106,6 +110,8 @@ export default function Home() {
 
   return (
     <div >
+
+      <Header />
      
      <div className="mt-40 flex-grow grid place-items-center tracking-widest"> 
             <p1 className=" mt-20 text-center text-5xl"> Fully decentralise NFTs</p1>
@@ -142,3 +148,6 @@ export default function Home() {
     </div>
   )
 }
+
+
+

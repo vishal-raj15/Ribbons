@@ -32,7 +32,6 @@ function Header(){
         }
     }
 
-
     return(
 
         <header className="flex flex-col sm:flex-row m-2 mt-10 justify-between
@@ -55,12 +54,14 @@ function Header(){
 
        
         </div>
-        { !user ? 
+        { user ? 
+
+            <p className=" py-1 px-4 rounded bg-[#4FBDBA] text-white hover:bg-[#35858B]"> {user}</p> :
             <button className=" py-1 px-4 rounded bg-[#4FBDBA] text-white hover:bg-[#35858B]"
             onClick={ConnectWallet}>
             connect wallet
-          </button> :
-          <p className=" text-white-800"> {user}</p>    
+          </button> 
+             
         }
         
         <Image 
