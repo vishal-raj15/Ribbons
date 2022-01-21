@@ -46,13 +46,13 @@ export default function Home() {
 
   async function fun1(){
 
-    setMove1(true);
-    setMove2(false);
+    setMove1(false);
+    setMove2(true);
   }
 
   async function fun2(){
-    setMove2(true);
-    setMove1(false);
+    setMove1(true);
+    setMove2(false);
   }
 
   return (
@@ -99,7 +99,7 @@ export default function Home() {
         </header>
 
         {
-          !move1 ? < MintPage />:<Middle />
+          (move1 == false) ? <Middle />:< MintPage />
         }
      
      {/* foolter ----------------- */}
