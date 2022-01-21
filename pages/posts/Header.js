@@ -5,7 +5,6 @@ import {
     CubeIcon
 } from "@heroicons/react/outline"
 
-import Link from 'next/link'
 
 import Imgh from '../../public/headName.png';
 import { useEffect, useState } from 'react'
@@ -40,13 +39,13 @@ function Header(){
         <div className="flex flex-grow justify-evenly gap-5 max-w-md"> 
            
 
-            <Link href="/">
-            <a className="text-xl font-bold">home</a>
-            </Link>
+            <Button className="text-xl font-bold ">
+            home
+            </Button>
 
-            <Link href="/">
-            <a className="text-xl font-bold ">Mint</a>
-            </Link>
+            < Button className="text-xl font-bold ">
+           Mint
+            </Button>
 
 
             
