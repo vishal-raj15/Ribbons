@@ -39,13 +39,13 @@ function Header(){
         <div className="flex flex-grow justify-evenly gap-5 max-w-md"> 
            
 
-            <Button className="text-xl font-bold ">
+            <button className="text-xl font-bold ">
             home
-            </Button>
+            </button>
 
-            < Button className="text-xl font-bold ">
+            < button className="text-xl font-bold ">
            Mint
-            </Button>
+            </button>
 
 
             
