@@ -44,7 +44,7 @@ function Header(){
             <a className="text-xl font-bold">home</a>
             </Link>
 
-            <Link href="/posts/mintingFrontPage">
+            <Link href="/">
             <a className="text-xl font-bold ">Mint</a>
             </Link>
 
