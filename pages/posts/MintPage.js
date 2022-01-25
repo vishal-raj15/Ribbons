@@ -59,7 +59,7 @@ export default function Home() {
 
     console.log(" provider ",signerAddress);
 
-      if( val <= 0){
+      if( val <= 0 || val > 10){
         console.log(" error , put some integer ");
 
       }
