@@ -5,7 +5,7 @@ import { Alert } from "reactstrap";
 
 import { ethers , BigNumber} from 'ethers';
 
-import NFT from '../../artifacts/RandomSVG.json';
+import NFT from '../../RandomSVG.json';
 import LinkSC from '../../artifacts/LinkToken.json';
 
 	const overrides = {
@@ -21,7 +21,7 @@ export default function Home() {
   const [recAccount, setRecAccount] = useState()
   const [amount, setAmount] = useState()
 
-  var nftAddress = "0xB085E2265E48E1456Dcc15Eb658056CB7Ad81567";
+  var nftAddress = "0x00bb533f9d447A6aFfed0EFdA6E188c201411761";
 
   async function requestAccount() {
     await window.ethereum.request({ method: 'eth_requestAccounts' });
@@ -63,44 +63,52 @@ export default function Home() {
         console.log(" error , put some integer ");
 
       }
+      
 
      else{
         console.log( " starting ..............");
         let tx = await NFTcontract.create( val, { gasLimit: 3000000 });
         let receipt = await tx.wait(1);
         let tokenId = receipt.events[3].args.tokenId;
-        tokenId = tokenId.toString();
+        tokenId = tokenId.toString();                              
         tokenId = parseInt(tokenId);
 
-        for( let i=tokenId ; i < val + tokenId ; i++){
+        console.log( " token Id : ", tokenId);
+
+        //for( let i=tokenId ; i < val + tokenId ; i++){
           let delta = Math.floor( Math.random()*1000000);
 
 
-          console.log( " minting ", i, "th nft ");
-          let tx = await NFTcontract.mintNft( i , signerAddress , delta);
-          await tx.wait(1);
+          console.log( " minting the nfts....... ");
+          let tx2 = await NFTcontract.mintNft( tokenId ,val, signerAddress);
+          await tx2.wait(1);
 
-
-
-        }
-
-        if( chainId != 31337){
+        
 
           console.log( "now finish the minting process ...");
-          for( let i=tokenId ; i< tokenId + val ; i++){
+         // for( let i=tokenId ; i< tokenId + val ; i++){
 
-            let minttx = await NFTcontract.finishMint( i, { gasLimit: 20000000 });
+            let minttx = await NFTcontract.finishMint( tokenId , val, { gasLimit: 20000000 });
             await minttx.wait(1);
+
+            for( let i=tokenId ; i< tokenId + val ; i++){
             console.log( i,`th tokenURL ${ await NFTcontract.tokenURI(i)}`);
-          }
-        }
+
+            }
+
+            console.log( " .......done.......");
+         // }
+
+
+
+        
 
     }
 
-
-
-
   }
+
+
+  
 
   return (
     <div >
@@ -127,12 +135,14 @@ export default function Home() {
     </button>
 
 
-     { parseInt(amount) <= 0 ?
-        <Alert color="warning">
-        <strong>Warning!</strong> Input a valid amount
+     { (parseInt(amount) <= 0 || parseInt(amount) > 10)  ?
+        <Alert color="warning" className='text-black bg-[#d3d471] mt-5 rounded-md'>
+        
+        <p className='m-1 '><strong>Warning!</strong> Should be in range [1 , 10]</p>
       </Alert> : <p></p>
-    
     }
+    
+    
 
 
 
